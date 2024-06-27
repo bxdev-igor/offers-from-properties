@@ -14,8 +14,6 @@ $arAvailSections = [555,710,649,645,661];
 $nav = CIBlockSection::GetNavChain(false,$arResult['IBLOCK_SECTION_ID']);
 if($arSectionPath = $nav->GetNext()){
     if(in_array($arSectionPath['ID'],$arAvailSections)) {
-        //echo '2222';
-        //echo '<pre>';print_r($arSectionPath);
         OfferResultModifier::prepareDetailArResult($arResult, $this->__component);
     }
 }
